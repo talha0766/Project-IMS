@@ -194,7 +194,8 @@ def main():
         print("4. Display Inventory")
         print("5. Search Item")
         print("6. Sales Report")
-        print("7. Save and Exit")
+        print("7. Delete Item")  # Add Delete Item option
+        print("8. Save and Exit")
 
         choice = input("Enter choice: ")
 
@@ -206,20 +207,16 @@ def main():
             supplier = input("Supplier: ")
             threshold = int(input("Threshold: "))
             system.add_item(name, sku, quantity, price, supplier, threshold)
-
         elif choice == '2':
             sku = input("SKU to sell: ")
             qty = int(input("Quantity to sell: "))
             system.sell_item(sku, qty)
-
         elif choice == '3':
             sku = input("SKU to order: ")
             qty = int(input("Quantity to order: "))
             system.record_order(sku, qty)
-
         elif choice == '4':
             system.display_inventory()
-
         elif choice == '5':
             keyword = input("Search keyword: ")
             results = system.search_item(keyword)
@@ -228,14 +225,14 @@ def main():
                     print(f"{item.name} - SKU: {item.sku}, Qty: {item.quantity}")
             else:
                 print("No matching items found.")
-
         elif choice == '6':
             system.generate_sales_report()
-
-        elif choice == '7':
+        elif choice == '7':  # Call delete_item
+            sku = input("Enter SKU of the item to delete: ")
+            system.delete_item(sku)
+        elif choice == '8':
             system.exit_system()
             break
-
         else:
             print("Invalid choice. Please try again.")
 
