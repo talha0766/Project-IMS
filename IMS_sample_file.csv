@@ -1,0 +1,11 @@
+name,sku,quantity,price,supplier,threshold
+Laptop,LAP001,50,1200.00,Dell,10
+Mouse,MOU002,200,25.00,Logitech,50
+Keyboard,KEY003,150,75.00,Razer,30
+Monitor,MON004,30,300.00,HP,5
+Webcam,WEB005,100,50.00,Logitech,20
+Headphones,HEA006,75,150.00,Sony,15
+Printer,PRI007,20,200.00,Epson,5
+SSD,SSD008,120,80.00,Samsung,25
+Router,ROU009,40,90.00,Netgear,10
+External Hard Drive,HDD010,60,100.00,Western Digital,15
